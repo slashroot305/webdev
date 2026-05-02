@@ -51,8 +51,6 @@ a { text-decoration: none; color: inherit; }
 /* ═══════════════════════════════════════════════════════
    CURSOR
 ═══════════════════════════════════════════════════════ */
-#cur { width:10px;height:10px;background:var(--lime);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .2s; }
-#cur-r { width:40px;height:40px;border:1.5px solid rgba(24,184,114,.35);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .1s ease,top .1s ease,width .22s,height .22s,border-color .2s; }
 
 /* ═══════════════════════════════════════════════════════
    NOISE LAYER
@@ -560,9 +558,6 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,.05);paddin
 </style>
 </head>
 <body>
-
-<div id="cur"></div>
-<div id="cur-r"></div>
 
 <!-- CONTACT BAR -->
 <div style="background:#0C6B50;padding:7px clamp(20px,5vw,80px);display:flex;align-items:center;justify-content:flex-end;gap:24px;flex-wrap:wrap;">
@@ -1448,20 +1443,6 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,.05);paddin
 </div>
 
 <script>
-// ── CURSOR ─────────────────────────────────────────────────
-const cur = document.getElementById('cur');
-const curR = document.getElementById('cur-r');
-document.addEventListener('mousemove', e => {
-  cur.style.left = e.clientX + 'px';
-  cur.style.top = e.clientY + 'px';
-  curR.style.left = e.clientX + 'px';
-  curR.style.top = e.clientY + 'px';
-});
-document.querySelectorAll('a,button,.os-tab,.pos-tab,.week-card,.price-card,.fp-card').forEach(el => {
-  el.addEventListener('mouseenter', () => { cur.style.width='14px'; cur.style.height='14px'; curR.style.width='54px'; curR.style.height='54px'; curR.style.borderColor='rgba(24,184,114,.65)'; });
-  el.addEventListener('mouseleave', () => { cur.style.width='10px'; cur.style.height='10px'; curR.style.width='40px'; curR.style.height='40px'; curR.style.borderColor='rgba(24,184,114,.35)'; });
-});
-
 // ── SCROLL REVEAL ───────────────────────────────────────────
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
