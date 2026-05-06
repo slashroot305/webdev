@@ -130,26 +130,6 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.04);padding:
 .footer-link:hover{color:var(--lime);}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.04);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 .footer-copy-line{font-size:10px;color:var(--mist2,#2A2A22);}
-
-/* ── CONTACT MODAL ─────────────────────────────────────── */
-#contact-modal{position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;padding:20px;}
-.modal-overlay{position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);}
-.modal-box{position:relative;background:var(--dk3);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:40px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;}
-.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--mist);font-size:26px;cursor:pointer;line-height:1;padding:4px 10px;}
-.modal-close:hover{color:var(--cream);}
-.modal-title{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--cream);margin-bottom:4px;}
-.modal-sub{font-size:10px;color:var(--lime);margin-bottom:24px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:1px;}
-.form-group{margin-bottom:16px;}
-.form-group label{display:block;font-size:10px;font-weight:700;color:var(--mist);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-family:'Barlow Condensed',sans-serif;}
-.form-group input,.form-group textarea{width:100%;background:var(--dk4);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:12px 14px;color:var(--cream);font-size:13px;font-family:'JetBrains Mono',monospace;outline:none;transition:border-color .2s;}
-.form-group input:focus,.form-group textarea:focus{border-color:var(--lime);}
-.form-group textarea{resize:vertical;min-height:100px;}
-.form-submit{width:100%;padding:14px;background:var(--lime);color:#080807;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;border:none;border-radius:var(--r);cursor:pointer;transition:background .2s,transform .1s;margin-top:4px;}
-.form-submit:hover{background:var(--lime2);}
-.form-submit:active{transform:scale(.98);}
-.form-feedback{margin-top:14px;padding:12px 16px;border-radius:var(--r);font-size:12px;text-align:center;display:none;}
-.form-feedback.success{background:rgba(24,196,114,.12);border:1px solid rgba(24,196,114,.35);color:var(--lime);}
-.form-feedback.error{background:rgba(232,60,60,.12);border:1px solid rgba(232,60,60,.35);color:var(--red2);}
 </style>
 </head>
 <body>
@@ -158,7 +138,7 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.04);padding:
 <div class="cbar">
   <a href="tel:+13318030897"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z" stroke="currentColor" stroke-width="2"/></svg>(331) 803-0897</a>
   <span class="cbar-sep">|</span>
-  <a href="#" onclick="openModal('General Inquiry');return false;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>NFSA@eliteraiderssoccer.com</a>
+  <a href="mailto:NFSA@eliteraiderssoccer.com"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/></svg>NFSA@eliteraiderssoccer.com</a>
   <span class="cbar-sep">|</span>
   <span class="cbar-brand">Elite Raiders Soccer</span>
 </div>
@@ -174,7 +154,7 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.04);padding:
       <h1>ELITE<br>RAID<br><em>ERS.</em></h1>
       <p class="hero-desc">The most complete youth soccer development system available. 96 actual drills — all animated, all fully scripted. Built for players who are serious about performing at the highest level. Built by a coach who has done it.</p>
       <div class="btn-row">
-        <a href="#" onclick="openModal('Get Access - Elite Raiders Soccer');return false;" class="btn btn-primary">Get Access →</a>
+        <a href="mailto:NFSA@eliteraiderssoccer.com" class="btn btn-primary">Get Access →</a>
         <a href="#drills" class="btn btn-secondary">See All 96 Drills</a>
       </div>
     </div>
@@ -788,13 +768,29 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.04);padding:
   <div class="sec-inner">
     <div class="eyebrow">Pricing</div>
     <div class="sh2">THREE LEVELS.<br><em>ONE SYSTEM.</em></div>
-    <p class="lead">Whether you're a player building your individual game, a coach managing a squad, or an academy building a program — there is an access level designed for exactly your situation.</p>
+    <p class="lead">Whether you're a player, a coach, or an academy — there is an access level built for your situation. Player and Coach licenses offer flexible monthly billing or a discounted annual rate. Academy is annual only.</p>
+
+    <!-- billing toggle -->
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;flex-wrap:wrap;">
+      <div style="display:flex;gap:4px;background:var(--dk3);border:1px solid rgba(255,255,255,.07);border-radius:5px;padding:4px;">
+        <button id="btn-monthly" onclick="setBilling('monthly')" style="font-family:inherit;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:8px 18px;border-radius:3px;border:none;cursor:pointer;background:var(--lime);color:var(--dk);transition:all .15s;">Monthly</button>
+        <button id="btn-annual" onclick="setBilling('annual')" style="font-family:inherit;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:8px 18px;border-radius:3px;border:none;cursor:pointer;background:transparent;color:var(--mist);transition:all .15s;">Annual <span style="font-size:9px;color:var(--lime);">Save 20%</span></button>
+        <button id="btn-onetime" onclick="setBilling('onetime')" style="font-family:inherit;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:8px 18px;border-radius:3px;border:none;cursor:pointer;background:transparent;color:var(--mist);transition:all .15s;">Own It</button>
+      </div>
+      <div id="billing-note" style="font-size:11px;color:var(--mist);line-height:1.6;">Billed monthly — cancel anytime. Full access from day one.</div>
+    </div>
+
     <div class="g3">
+      <!-- PLAYER -->
       <div class="pcard">
         <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mist);margin-bottom:12px;">Player Access</div>
-        <div class="price-n">$249</div>
-        <div class="price-per">One-time purchase</div>
-        <div class="price-list">
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px;">
+          <div class="price-n" id="player-price">$24</div>
+          <div id="player-suffix" style="font-size:13px;color:var(--mist);font-weight:700;">/mo</div>
+        </div>
+        <div class="price-per" id="player-per">Billed monthly · cancel anytime</div>
+        <div id="player-save" style="display:none;font-size:10px;font-weight:700;color:var(--lime);margin-top:5px;letter-spacing:.3px;">— Save $50 vs monthly</div>
+        <div class="price-list" style="margin-top:14px;">
           <div class="price-item">Complete 96-drill in-season program</div>
           <div class="price-item">16-week off-season conditioning plan</div>
           <div class="price-item">All animated drills — team, position, set piece</div>
@@ -803,13 +799,19 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.04);padding:
           <div class="price-item">Mental performance + nutrition framework</div>
           <div class="price-item">Quarterly drill refresh (8–12 new drills)</div>
         </div>
-        <a href="#" onclick="openModal('Player Access - Elite Raiders Soccer');return false;" class="cta-btn outline" style="display:block;text-align:center;">Get Player Access</a>
+        <a href="mailto:NFSA@eliteraiderssoccer.com?subject=Player Access" class="cta-btn outline" style="display:block;text-align:center;margin-top:20px;">Get Player Access</a>
       </div>
+
+      <!-- COACH -->
       <div class="pcard featured">
         <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lime);margin-bottom:12px;">⭐ Coach License — Most Popular</div>
-        <div class="price-n">$799</div>
-        <div class="price-per">per season (12 months)</div>
-        <div class="price-list">
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px;">
+          <div class="price-n" id="coach-price">$74</div>
+          <div id="coach-suffix" style="font-size:13px;color:var(--mist);font-weight:700;">/mo</div>
+        </div>
+        <div class="price-per" id="coach-per">Billed monthly · cancel anytime</div>
+        <div id="coach-save" style="display:none;font-size:10px;font-weight:700;color:var(--lime);margin-top:5px;letter-spacing:.3px;">— Save $239 vs monthly</div>
+        <div class="price-list" style="margin-top:14px;">
           <div class="price-item">Everything in Player Access</div>
           <div class="price-item">Both programs for up to 35 players</div>
           <div class="price-item">All 6 upgrade tiers included quarterly + annually</div>
@@ -817,13 +819,19 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.04);padding:
           <div class="price-item">Set piece expansion (2–4 new plays per period)</div>
           <div class="price-item">Email support from Nana directly</div>
         </div>
-        <a href="#" onclick="openModal('Coach License - Elite Raiders Soccer');return false;" class="cta-btn lime" style="display:block;text-align:center;">Get Coach License</a>
+        <a href="mailto:NFSA@eliteraiderssoccer.com?subject=Coach License" class="cta-btn lime" style="display:block;text-align:center;margin-top:20px;">Get Coach License</a>
       </div>
+
+      <!-- ACADEMY -->
       <div class="pcard">
         <div style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mist);margin-bottom:12px;">Academy License</div>
-        <div class="price-n">$3,499</div>
-        <div class="price-per">per year · unlimited coaches + players</div>
-        <div class="price-list">
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px;">
+          <div class="price-n">$3,499</div>
+          <div style="font-size:13px;color:var(--mist);font-weight:700;">/yr</div>
+        </div>
+        <div class="price-per">Annual only · unlimited coaches + players</div>
+        <div style="font-size:10px;color:var(--mist);margin-top:8px;font-style:italic;">Institutional commitment from both sides.</div>
+        <div class="price-list" style="margin-top:14px;">
           <div class="price-item">Everything in Coach License</div>
           <div class="price-item">Unlimited coaches and players</div>
           <div class="price-item">ALL 6 upgrade tiers auto-delivered</div>
@@ -831,15 +839,123 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.04);padding:
           <div class="price-item">Direct contact with Nana — custom program adjustments</div>
           <div class="price-item">Priority for in-person coaching sessions</div>
         </div>
-        <a href="#" onclick="openModal('Academy License - Elite Raiders Soccer');return false;" class="cta-btn outline" style="display:block;text-align:center;">Get Academy License</a>
+        <a href="mailto:NFSA@eliteraiderssoccer.com?subject=Academy License" class="cta-btn outline" style="display:block;text-align:center;margin-top:20px;">Get Academy License</a>
       </div>
+    </div>
+
+    <!-- COMPARISON NOTE -->
+    <div style="margin-top:28px;padding:18px 24px;background:var(--dk3);border:1px solid rgba(255,255,255,.06);border-radius:5px;display:flex;gap:32px;flex-wrap:wrap;align-items:center;">
+      <div style="font-size:12px;color:var(--cream2);line-height:1.7;"><strong style="color:var(--cream);">Monthly</strong> — lowest barrier to entry. Full access from day one. Cancel anytime.</div>
+      <div style="width:1px;height:32px;background:rgba(255,255,255,.07);flex-shrink:0;"></div>
+      <div style="font-size:12px;color:var(--cream2);line-height:1.7;"><strong style="color:var(--cream);">Annual</strong> — best value. Save 20%. All 6 upgrade tiers included. Preferred for coaches running a full season.</div>
+      <div style="width:1px;height:32px;background:rgba(255,255,255,.07);flex-shrink:0;"></div>
+      <div style="font-size:12px;color:var(--cream2);line-height:1.7;"><strong style="color:var(--cream);">Own It</strong> — one payment, yours forever. Current version + quarterly refreshes. No recurring billing.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+function setBilling(type) {
+  const btns = {monthly:'btn-monthly',annual:'btn-annual',onetime:'btn-onetime'};
+  Object.entries(btns).forEach(([k,id]) => {
+    const el = document.getElementById(id);
+    el.style.background = k===type ? 'var(--lime)' : 'transparent';
+    el.style.color = k===type ? 'var(--dk)' : 'var(--mist)';
+  });
+  const data = {
+    monthly: {pp:'$24',ps:'/mo',pper:'Billed monthly · cancel anytime',cp:'$74',cs:'/mo',cper:'Billed monthly · cancel anytime',note:'Billed monthly — cancel anytime. Full access from day one.',psave:false,csave:false},
+    annual:  {pp:'$199',ps:'/yr',pper:'Billed annually — best value',cp:'$649',cs:'/yr',cper:'Billed annually — best value',note:'Billed annually — save 20% vs monthly. All upgrades included.',psave:true,csave:true},
+    onetime: {pp:'$249',ps:'',pper:'One-time purchase — own it forever',cp:'$799',cs:'',cper:'One-time purchase — own it forever',note:'Single payment. Current program + quarterly drill refreshes. No recurring billing.',psave:false,csave:false},
+  };
+  const d = data[type];
+  document.getElementById('player-price').textContent = d.pp;
+  document.getElementById('player-suffix').textContent = d.ps;
+  document.getElementById('player-per').textContent = d.pper;
+  document.getElementById('player-save').style.display = d.psave ? 'block' : 'none';
+  document.getElementById('coach-price').textContent = d.cp;
+  document.getElementById('coach-suffix').textContent = d.cs;
+  document.getElementById('coach-per').textContent = d.cper;
+  document.getElementById('coach-save').style.display = d.csave ? 'block' : 'none';
+  document.getElementById('billing-note').textContent = d.note;
+}
+</script>
+
+<div class="divider"></div>
+
+<!-- FOUNDATIONS TIER -->
+<section class="sec" id="foundations" style="background:var(--dk2);">
+  <div class="sec-inner">
+    <div style="display:inline-flex;align-items:center;gap:8px;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);margin-bottom:12px;">
+      <div style="width:16px;height:1.5px;background:var(--gold2);"></div>
+      COMING SOON — ELITE RAIDERS FOUNDATIONS
+    </div>
+    <div class="sh2" style="margin-bottom:18px;">THE PIPELINE<br><em style="color:var(--gold2);">STARTS AT 10.</em></div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:48px;" class="os-twocol">
+      <div>
+        <p style="font-size:15px;color:var(--cream2);line-height:1.9;margin-bottom:20px;">The Elite Raiders system is built for ages 12–19. <strong style="color:var(--cream);">Foundations</strong> is the next product — purpose-built for ages 10–12 with the same identity, a lighter system, and a direct graduation bridge into the Elite program at age 12.</p>
+        <p style="font-size:13px;color:var(--mist);line-height:1.85;margin-bottom:28px;">Players don't learn a different system at age 10. They learn a simplified version of the same one — so they arrive at 12 already thinking in the Elite Raiders language.</p>
+        <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(240,168,32,.08);border:1px solid rgba(240,168,32,.2);border-radius:5px;padding:12px 20px;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--gold2);animation:pulse-gold 2s ease-out infinite;flex-shrink:0;"></div>
+          <div style="font-size:11px;color:var(--gold2);font-weight:700;letter-spacing:.5px;">Launching Month 12 — Join the waitlist for early access</div>
+        </div>
+        <style>@keyframes pulse-gold{0%{box-shadow:0 0 0 0 rgba(240,168,32,.5);}100%{box-shadow:0 0 0 10px rgba(240,168,32,0);}}</style>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 18px;background:var(--dk3);border-radius:var(--r);border-left:3px solid var(--gold2);">
+          <div style="font-size:22px;flex-shrink:0;">⚽</div>
+          <div><div style="font-size:12px;font-weight:700;color:var(--cream);margin-bottom:3px;">30 Foundations Drills</div><div style="font-size:11px;color:var(--mist);line-height:1.6;">Possession, rondo, small-sided games, basic position work. Max 7v7. All animated. All scripted. Same format as the Elite library.</div></div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 18px;background:var(--dk3);border-radius:var(--r);border-left:3px solid var(--lime);">
+          <div style="font-size:22px;flex-shrink:0;">📅</div>
+          <div><div style="font-size:12px;font-weight:700;color:var(--cream);margin-bottom:3px;">12-Week Calendar</div><div style="font-size:11px;color:var(--mist);line-height:1.6;">Three sessions per week, max 60 minutes each. Phase 1: Fun + Identity. Phase 2: Skill Building. Phase 3: Simple Tactics.</div></div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 18px;background:var(--dk3);border-radius:var(--r);border-left:3px solid var(--blue2);">
+          <div style="font-size:22px;flex-shrink:0;">🎓</div>
+          <div><div style="font-size:12px;font-weight:700;color:var(--cream);margin-bottom:3px;">Graduation Bridge Module</div><div style="font-size:11px;color:var(--mist);line-height:1.6;">A 4-week module at the end that introduces the 4-3-3, the PRESS! trigger, and the DM role. Players arrive at the Elite program already speaking the language.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- THREE-TIER PIPELINE -->
+    <div style="margin-bottom:32px;">
+      <div style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--mist);margin-bottom:16px;display:flex;align-items:center;gap:10px;"><div style="width:14px;height:1.5px;background:var(--mist);"></div>The Complete Player Pipeline</div>
+      <div style="display:flex;gap:0;border:1px solid rgba(255,255,255,.06);border-radius:var(--r);overflow:hidden;">
+        <div style="flex:1;padding:20px 22px;border-right:1px solid rgba(255,255,255,.06);">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold2);margin-bottom:6px;">FOUNDATIONS · Ages 10–12</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--gold2);line-height:1;margin-bottom:8px;">Entry Point</div>
+          <div style="font-size:11px;color:var(--mist);line-height:1.65;">30 drills · 12-week calendar · Identity introduction · Graduation bridge</div>
+          <div style="margin-top:12px;font-size:10px;font-weight:700;color:var(--gold2);display:inline-flex;align-items:center;gap:6px;padding:5px 12px;background:rgba(240,168,32,.08);border:1px solid rgba(240,168,32,.2);border-radius:3px;">⏳ Coming Month 12</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 8px;color:var(--mist);font-size:18px;">→</div>
+        <div style="flex:1;padding:20px 22px;border-right:1px solid rgba(255,255,255,.06);background:rgba(24,196,114,.03);">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--lime);margin-bottom:6px;">ELITE · Ages 12–19</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--lime);line-height:1;margin-bottom:8px;">Full System</div>
+          <div style="font-size:11px;color:var(--mist);line-height:1.65;">96 drills · 24-week calendar · 5 formations · Off-season plan · 6 upgrade tiers</div>
+          <div style="margin-top:12px;font-size:10px;font-weight:700;color:var(--lime);display:inline-flex;align-items:center;gap:6px;padding:5px 12px;background:rgba(24,196,114,.08);border:1px solid rgba(24,196,114,.2);border-radius:3px;">✓ Available Now</div>
+        </div>
+        <div style="display:flex;align-items:center;padding:0 8px;color:var(--mist);font-size:18px;">→</div>
+        <div style="flex:1;padding:20px 22px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue2);margin-bottom:6px;">ALUMNI · Ages 19+</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--blue2);line-height:1;margin-bottom:8px;">Advanced Track</div>
+          <div style="font-size:11px;color:var(--mist);line-height:1.65;">College prep · Semi-pro conditioning · Advanced individual programs</div>
+          <div style="margin-top:12px;font-size:10px;font-weight:700;color:var(--mist);display:inline-flex;align-items:center;gap:6px;padding:5px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;">🔭 Future Roadmap</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOUNDATIONS WAITLIST CTA -->
+    <div style="background:rgba(240,168,32,.05);border:1px solid rgba(240,168,32,.15);border-radius:var(--r);padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--cream);text-transform:uppercase;margin-bottom:6px;">Get Early Access to Foundations</div>
+        <div style="font-size:12px;color:var(--cream2);line-height:1.7;">Beta coaches get free access during the build phase in exchange for feedback. Limited spots.</div>
+      </div>
+      <a href="mailto:NFSA@eliteraiderssoccer.com?subject=Foundations Early Access" style="display:inline-flex;align-items:center;gap:10px;background:var(--gold2);color:var(--dk);font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:14px 28px;border-radius:4px;white-space:nowrap;transition:all .2s;">Join the Waitlist →</a>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -849,14 +965,14 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.04);padding:
       </div>
       <div>
         <div class="footer-h">Contact</div>
-        <a href="#" onclick="openModal('General Inquiry');return false;" class="footer-link">NFSA@eliteraiderssoccer.com</a>
+        <a href="mailto:NFSA@eliteraiderssoccer.com" class="footer-link">NFSA@eliteraiderssoccer.com</a>
         <a href="tel:+13318030897" class="footer-link">(331) 803-0897</a>
       </div>
       <div>
         <div class="footer-h">Program</div>
         <a href="#drills" class="footer-link">96-Drill Library</a>
         <a href="#pricing" class="footer-link">Pricing</a>
-        <a href="#" onclick="openModal('Academy Inquiry - Elite Raiders Soccer');return false;" class="footer-link">Academy Licensing</a>
+        <a href="mailto:NFSA@eliteraiderssoccer.com?subject=Academy Inquiry" class="footer-link">Academy Licensing</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -864,88 +980,5 @@ footer{background:var(--dk2);border-top:1px solid rgba(255,255,255,.04);padding:
     </div>
   </div>
 </footer>
-
-<!-- ─── CONTACT MODAL ──────────────────────────────────── -->
-<div id="contact-modal" style="display:none;" aria-modal="true" role="dialog">
-  <div class="modal-overlay" onclick="closeModal()"></div>
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
-    <div class="modal-title">Get In Touch</div>
-    <div class="modal-sub" id="modal-subject-display"></div>
-    <form id="contact-form" action="https://formspree.io/f/mojrvyjv" method="POST">
-      <input type="hidden" name="subject" id="form-subject">
-      <div class="form-group">
-        <label for="form-name">Full Name</label>
-        <input type="text" id="form-name" name="name" required placeholder="Your name">
-      </div>
-      <div class="form-group">
-        <label for="form-email">Email Address</label>
-        <input type="email" id="form-email" name="email" required placeholder="your@email.com">
-      </div>
-      <div class="form-group">
-        <label for="form-phone">Phone (optional)</label>
-        <input type="tel" id="form-phone" name="phone" placeholder="(555) 000-0000">
-      </div>
-      <div class="form-group">
-        <label for="form-message">Message</label>
-        <textarea id="form-message" name="message" rows="4" placeholder="Tell us about your team, age group, or any questions..."></textarea>
-      </div>
-      <button type="submit" class="form-submit">Send Message</button>
-      <div id="form-feedback" class="form-feedback"></div>
-    </form>
-  </div>
-</div>
-
-<script>
-function openModal(subject) {
-  const modal = document.getElementById('contact-modal');
-  document.getElementById('form-subject').value = subject;
-  document.getElementById('modal-subject-display').textContent = subject;
-  const fb = document.getElementById('form-feedback');
-  fb.style.display = 'none';
-  fb.className = 'form-feedback';
-  document.getElementById('contact-form').reset();
-  document.getElementById('form-subject').value = subject;
-  modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function closeModal() {
-  document.getElementById('contact-modal').style.display = 'none';
-  document.body.style.overflow = '';
-}
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('.form-submit');
-  const fb = document.getElementById('form-feedback');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  fb.style.display = 'none';
-  try {
-    const res = await fetch(this.action, {
-      method: 'POST',
-      body: new FormData(this),
-      headers: { 'Accept': 'application/json' }
-    });
-    fb.style.display = 'block';
-    if (res.ok) {
-      fb.className = 'form-feedback success';
-      fb.textContent = '✓ Message sent! We\'ll be in touch shortly.';
-      this.reset();
-    } else {
-      fb.className = 'form-feedback error';
-      fb.textContent = 'Something went wrong. Please try again.';
-    }
-  } catch {
-    fb.style.display = 'block';
-    fb.className = 'form-feedback error';
-    fb.textContent = 'Something went wrong. Please try again.';
-  }
-  btn.textContent = 'Send Message';
-  btn.disabled = false;
-});
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-</script>
-
 </body>
 </html>
-<!-- end of code -->
