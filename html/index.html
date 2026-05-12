@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The most complete youth soccer development system. 96 drills, 16-week off-season plan, 5 formations. Ages 12–19.">
 <title>Elite Raiders Soccer — NFSA Elite Development System</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230B0C09'/><text x='16' y='22' text-anchor='middle' fill='%2318C472' font-size='13' font-weight='900' font-family='sans-serif'>ER</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--dk:#0B0C09;--dk2:#111309;--dk3:#181A10;--dk4:#1F2216;--green:#0A6A48;--lime:#18C472;--lime2:#52E09A;--gold:#C08008;--gold2:#F0A820;--red2:#E83C3C;--blue2:#3A7AE0;--orange2:#E86818;--purple2:#8858E8;--cream:#EAE4D8;--cream2:#C4BCA8;--mist:#5A5A50;--r:5px;}
@@ -1063,11 +1065,20 @@ function setBilling(type) {
     errorMsg.style.display='none';
     fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
       .then(function(r){
-        if(r.ok){successMsg.style.display='block';form.reset();}
-        else{errorMsg.style.display='block';}
+        if(r.ok){
+          successMsg.style.display='block';
+          form.reset();
+          document.getElementById('cmodal-subject').value=document.getElementById('cmodal-subject').defaultValue;
+        } else {
+          return r.json().then(function(data){
+            errorMsg.textContent=(data&&data.errors)?data.errors.map(function(e){return e.message;}).join(', '):'Something went wrong. Please try again.';
+            errorMsg.style.display='block';
+          });
+        }
         submitBtn.textContent='Send →';submitBtn.disabled=false;
       })
       .catch(function(){
+        errorMsg.textContent='Something went wrong. Please try again.';
         errorMsg.style.display='block';
         submitBtn.textContent='Send →';submitBtn.disabled=false;
       });
