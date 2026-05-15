@@ -299,8 +299,53 @@ function renderSummary(containerId) {
   });
 }
 
+// ── Music ─────────────────────────────────────────────────────────
+let ytPlayer   = null;
+let musicMuted = false;
+const PLAYLIST_ID = 'PLi9QZjTWcp-Z_8JFSaJm5yLlss_nZNoGT';
+
+window.onYouTubeIframeAPIReady = function () {
+  ytPlayer = new YT.Player('yt-player', {
+    height: '1',
+    width:  '1',
+    playerVars: {
+      listType:  'playlist',
+      list:      PLAYLIST_ID,
+      autoplay:  0,
+      controls:  0,
+      loop:      1,
+      fs:        0,
+      disablekb: 1,
+      modestbranding: 1,
+    },
+  });
+};
+
+function startMusic() {
+  if (!ytPlayer || typeof ytPlayer.playVideo !== 'function') return;
+  ytPlayer.setVolume(50);
+  ytPlayer.playVideo();
+}
+
+document.getElementById('btn-music').addEventListener('click', () => {
+  if (!ytPlayer || typeof ytPlayer.isMuted !== 'function') return;
+  const btn = document.getElementById('btn-music');
+  if (musicMuted) {
+    ytPlayer.unMute();
+    musicMuted = false;
+    btn.textContent = '♫';
+    btn.classList.remove('muted');
+  } else {
+    ytPlayer.mute();
+    musicMuted = true;
+    btn.textContent = '♪';
+    btn.classList.add('muted');
+  }
+});
+
 // ── Button Wiring ─────────────────────────────────────────────────
 document.getElementById('btn-start').addEventListener('click', () => {
+  startMusic();
   initGame();
   startLevel();
 });
