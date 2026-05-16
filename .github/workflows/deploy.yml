@@ -14,4 +14,4 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: . # or 'dist' if you have a build step
+          folder: nfsa-eliteraiderssoccer # or 'dist' if you have a build step
