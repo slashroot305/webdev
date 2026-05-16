@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Redline Recall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- START SCREEN -->
+  <div id="screen-start" class="screen active">
+    <div class="start-bg"></div>
+    <div class="start-content">
+      <div class="brand">
+        <div class="brand-line1">REDLINE</div>
+        <div class="brand-line2">RECALL</div>
+        <div class="brand-divider"></div>
+        <div class="brand-tagline">Match the Make &nbsp;·&nbsp; Own the Grid</div>
+      </div>
+<button id="btn-start" class="btn-primary">
+        <span class="btn-label">TAP TO START</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="screen-game" class="screen">
+    <div class="game-header">
+      <div class="level-label">LEVEL <span id="level-current">1</span> <span class="level-of">OF</span> <span id="level-total">10</span></div>
+      <div class="remaining-label">LEFT: <span id="remaining">5</span></div>
+    </div>
+    <div class="timer-track">
+      <div id="timer-fill" class="timer-fill"></div>
+    </div>
+    <div class="board">
+      <div class="board-col">
+        <div class="col-header">MAKE</div>
+        <div id="makes-list" class="cards-list"></div>
+      </div>
+      <div class="board-sep"></div>
+      <div class="board-col">
+        <div class="col-header">MODEL</div>
+        <div id="models-list" class="cards-list"></div>
+      </div>
+    </div>
+    <div id="feedback" class="feedback"></div>
+  </div>
+
+  <!-- LEVEL COMPLETE SCREEN -->
+  <div id="screen-level-complete" class="screen">
+    <div class="result-icon">✓</div>
+    <div class="result-title">LEVEL CLEAR</div>
+    <div class="result-time">Completed in <span id="level-time">0s</span></div>
+    <button id="btn-next-level" class="btn-primary">NEXT LEVEL</button>
+    <button id="btn-quit-complete" class="btn-ghost">QUIT</button>
+  </div>
+
+  <!-- TIMEOUT SCREEN -->
+  <div id="screen-timeout" class="screen">
+    <div class="result-icon timeout-icon">✕</div>
+    <div class="result-title">TIME'S UP</div>
+    <div class="result-sub">You didn't finish in time</div>
+    <button id="btn-try-again" class="btn-primary">TRY AGAIN</button>
+    <button id="btn-quit-timeout" class="btn-ghost">QUIT</button>
+  </div>
+
+  <!-- SUMMARY SCREEN -->
+  <div id="screen-summary" class="screen">
+    <div class="result-title">SESSION RECAP</div>
+    <div id="summary-list" class="summary-list"></div>
+    <button id="btn-play-again" class="btn-primary">PLAY AGAIN</button>
+  </div>
+
+  <!-- WIN SCREEN -->
+  <div id="screen-win" class="screen">
+    <div class="win-title">CHAMPION</div>
+    <div class="win-sub">All 10 Levels Complete</div>
+    <div id="win-summary-list" class="summary-list"></div>
+    <button id="btn-win-play-again" class="btn-primary">PLAY AGAIN</button>
+  </div>
+
+  <!-- hidden YouTube player node -->
+  <div id="yt-player" style="position:fixed;bottom:-10px;left:-10px;width:1px;height:1px;opacity:0;pointer-events:none;"></div>
+
+  <!-- floating music toggle -->
+  <button id="btn-music" class="btn-music" title="Toggle music">♫</button>
+
+  <script src="js/game.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
