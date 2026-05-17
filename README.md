@@ -4,7 +4,7 @@ Static website for the **NFSA Elite Raiders Soccer** youth development program. 
 
 ## Live Site
 
-Deployed via GitHub Pages: [slashroot305.github.io/nfsa-eliteraiderssoccer](https://nfsa.eliteraiderssoccer.com)
+Deployed via GitHub Pages: [nfsa.eliteraiderssoccer.com]
 
 ## Project Structure
 
